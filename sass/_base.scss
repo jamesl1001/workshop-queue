@@ -1,0 +1,36 @@
+* {
+   box-sizing: border-box;
+}
+
+footer, header {
+    display: block;
+}
+
+body {
+    background: $dgrey;
+    margin: 0;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.centre {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.checkbox-hack {
+    display: none;
+}
+
+#main {
+    background: $lgrey;
+    overflow: hidden;
+}
+
+@media (min-width: 800px) {
+    .centre {
+        padding: 40px;
+    }
+}

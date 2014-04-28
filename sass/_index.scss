@@ -1,0 +1,91 @@
+h2 {
+    margin: 0 0 20px;
+    color: $dgrey;
+    font-weight: normal;
+}
+
+.workshop-card {
+    width: 100%;
+    min-height: 190px;
+    background: #FFF;
+    border-radius: 5px;
+    float: left;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow: hidden;
+    color: $dgrey;
+    text-decoration: none;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        box-shadow: 0 0 1px $mgrey;
+    }
+
+    img {
+        width: 40px;
+        border-radius: 5px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        float: right;
+    }
+
+    span {
+        display: block;
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+.workshop-card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media (min-width: 800px) {
+    h2 {
+        margin-bottom: 40px;
+    }
+
+    .workshop-card {
+        width: 49%;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .workshop-card:nth-child(even) {
+        margin-left: 0;
+    }
+
+    .workshop-card:nth-child(odd) {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .workshop-card {
+        width: 23.5%;
+    }
+
+    .workshop-card:nth-child(even) {
+        margin-left: 1%;
+    }
+
+    .workshop-card:nth-child(odd) {
+        margin-right: 1%;
+    }
+
+    .workshop-card:nth-child(4n+2) {
+        margin-left: 0;
+    }
+
+    .workshop-card:nth-child(4n+1) {
+        margin-right: 0;
+    }
+}

@@ -1,0 +1,94 @@
+header {
+    height: 140px;
+    background: #FFF;
+}
+
+#header-img {
+    width: 100px;
+    float: left;
+    border-radius: 10px;
+}
+
+#header-info {
+    padding-left: 120px;
+}
+
+#header-title {
+    margin: 0 0 7px;
+    color: $blue;
+    font-size: 20px;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.full-width {
+    width: 100%;
+}
+
+#workshop-lecturer,
+#workshop-date {
+    float: left;
+    margin: 7px 0;
+    color: $mgrey;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#workshop-lecturer {
+    width: 60%;
+}
+
+#workshop-date {
+    width: 40%;
+}
+
+#workshop-room,
+#workshop-users,
+#workshop-time {
+    width: 33.33%;
+    float: left;
+    margin: 7px 0;
+    color: $blue;
+    font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@media (min-width: 800px) {
+    header {
+        height: 380px;
+    }
+
+    #header-img {
+        width: 300px;
+    }
+
+    #header-info {
+        padding-left: 340px;
+    }
+
+    #header-title {
+        margin: 20px 0;
+        font-size: 40px;
+    }
+
+    #workshop-lecturer,
+    #workshop-date {
+        width: 100%;
+        float: none;
+        margin: 24px 0;
+        font-size: 20px;
+    }
+
+    #workshop-room,
+    #workshop-users,
+    #workshop-time {
+        margin: 8px 0;
+        color: $blue;
+        font-size: 25px;
+    }
+}
