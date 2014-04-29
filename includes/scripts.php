@@ -2,6 +2,5 @@
 <script>
     var workshopId = <?= $workshopId; ?>;
 </script>
-<?php endif; ?>
-
 <script src="/js/scripts.js"></script>
+<?php endif; ?>

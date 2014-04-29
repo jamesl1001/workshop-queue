@@ -5,6 +5,7 @@
     border-radius: 5px;
     position: relative;
     margin-bottom: 20px;
+    cursor: pointer;
 
     &:hover {
         box-shadow: 0 0 1px $mgrey;
@@ -31,7 +32,6 @@
 .user-cancel {
     display: block;
     right: 0;
-    cursor: pointer;
     z-index: 2;
     font-size: 25px;
 }
