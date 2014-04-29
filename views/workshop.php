@@ -16,22 +16,7 @@
 
 <div id="main" class="centre">
 
-    <?php if(empty($slots)): ?>
-        <h2>There is currently no one in need of assistance.</h2>
-    <?php endif; ?>
-
-    <?php $i = 1; foreach($slots as $slot): ?>
-
-        <div class="user-slot user-slot--me">
-            <span class="user-order"><?= $i; ?></span>
-            <span class="user-cancel"><i class="icon-cancel"></i></span>
-            <span class="user-name"><?= $slot->name; ?> <span class="user-id"><?= $slot->kentId; ?></span></span>
-            <label class="user-map-btn" for="user-slot-toggle--<?= $i; ?>"><i class="icon-map"></i></label>
-            <input type="checkbox" id="user-slot-toggle--<?= $i; ?>" class="checkbox-hack"/>
-            <img src="/img/seat-plan.jpg" class="user-map" title="<?= $slot->location; ?>"/>
-        </div>
-
-    <?php $i++; endforeach; ?>
+    <div id="user-slots"></div>
 
     <label id="request-assistance-btn" for="request-assistance-toggle"><i class="icon-add"></i><span>Request assistance</span></label>
     <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack"/>
