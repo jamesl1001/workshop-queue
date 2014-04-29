@@ -3,7 +3,7 @@ var i = 1;
 var userSlotsWrapper = document.getElementById('user-slots');
 
 setInterval(function() {
-    console.log('interval' + i);
+    console.log('Polling... [' + i + ']');
     getSlots();
     i++;
 }, 5000);
@@ -65,4 +65,21 @@ function hideMap() {
 
 function cancelSlot(slotId) {
     console.log(slotId);
+
+    var data = 'slotId=' + slotId;
+    var request = new XMLHttpRequest();
+    request.open('POST', '/php/cancelSlot.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(data);
+
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == 200) {
+            console.log('success');
+            getSlots();
+        }
+    }
+
+    request.onerror = function() {
+        alert('Something went wrong. Please try again.');
+    }
 }
