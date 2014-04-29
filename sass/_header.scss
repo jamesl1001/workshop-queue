@@ -52,9 +52,9 @@ header {
     width: 33.33%;
     float: left;
     margin: 7px 0;
+    position: relative;
     color: $blue;
     font-size: 16px;
-    overflow: hidden;
     white-space: nowrap;
 }
 
@@ -90,5 +90,50 @@ header {
         margin: 8px 0;
         color: $blue;
         font-size: 25px;
+
+        &:hover {
+            &:before {
+                content: '';
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid $lgrey;
+                position: absolute;
+                left: 10px;
+                bottom: -20px;
+            }
+
+            &:after {
+                height: 20px;
+                background: $lgrey;
+                border-radius: 5px;
+                padding: 5px 15px;
+                position: absolute;
+                left: 0px;
+                bottom: -50px;
+                color: $dgrey;
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+    }
+
+    #workshop-room:hover {
+        &:after {
+            content: 'Room';
+        }
+    }
+
+    #workshop-users:hover {
+        &:after {
+            content: 'Number of people in queue';
+        }
+    }
+
+    #workshop-time:hover {
+        &:after {
+            content: 'Approx. wait time';
+        }
     }
 }
