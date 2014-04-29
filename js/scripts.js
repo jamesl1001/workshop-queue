@@ -76,20 +76,24 @@ function hideMap() {
 }
 
 function cancelSlot(slotId) {
-    var data = 'slotId=' + slotId;
-    var request = new XMLHttpRequest();
-    request.open('POST', '/php/cancelSlot.php', true);
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    request.send(data);
+    var choice = confirm('Are you sure you would like to cancel your request?');
 
-    request.onreadystatechange = function() {
-        if(request.readyState == 4 && request.status == 200) {
-            getSlots();
+    if(choice) {
+        var data = 'slotId=' + slotId;
+        var request = new XMLHttpRequest();
+        request.open('POST', '/php/cancelSlot.php', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.send(data);
+
+        request.onreadystatechange = function() {
+            if(request.readyState == 4 && request.status == 200) {
+                getSlots();
+            }
         }
-    }
 
-    request.onerror = function() {
-        alert('Something went wrong. Please try again.');
+        request.onerror = function() {
+            alert('Something went wrong. Please try again.');
+        }
     }
 }
 
