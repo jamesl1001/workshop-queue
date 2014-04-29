@@ -12,6 +12,7 @@
             <p id="workshop-time"><i class="icon-time"></i> <?= $workshop->time; ?> mins</p>
         </div>
     </div>
+    <a href="/" id="exit-btn" title="Exit"><i class="icon-exit"></i></a>
 </header>
 
 <div id="main" class="centre">
