@@ -37,10 +37,7 @@ userSlotsWrapper.addEventListener('click', function(e) {
     }
 });
 
-requestAssistanceSubmit.addEventListener('click', function(e) {
-    e.preventDefault();
-    requestAssistance();
-});
+requestAssistanceSubmit.addEventListener('click', requestAssistance);
 
 mapModal.addEventListener('click', hideMap);
 
