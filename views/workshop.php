@@ -32,11 +32,11 @@
             </div>
 
             <div class="request-assistance-form-row">
-                <label for="request-seat">seat</label> <img src="/img/seat-plan.jpg"/>
+                <label for="request-seat">seat</label> <img src="/img/room-<?= $workshop->room; ?>.png"/>
             </div>
 
             <div class="request-assistance-form-row">
-                <i class="icon-add"></i><input type="submit" value="done"/>
+                <i class="icon-add"></i><input type="submit" value="done" id="request-submit"/>
             </div>
         </form>
     </div>

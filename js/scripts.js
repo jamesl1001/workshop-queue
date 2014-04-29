@@ -1,8 +1,10 @@
 // Init
-var main             = document.getElementById('main');
-var userSlotsWrapper = document.getElementById('user-slots');
-var mapModal         = document.getElementById('map-modal');
-var mapModalMarker   = document.getElementById('map-modal-marker');
+var main                    = document.getElementById('main');
+var userSlotsWrapper        = document.getElementById('user-slots');
+var requestAssistanceSubmit = document.getElementById('request-submit');
+var requestAssistanceToggle = document.getElementById('request-assistance-toggle');
+var mapModal                = document.getElementById('map-modal');
+var mapModalMarker          = document.getElementById('map-modal-marker');
 
 getSlots();
 
@@ -32,6 +34,11 @@ userSlotsWrapper.addEventListener('click', function(e) {
     if(e.target.className == 'icon-cancel') {
         cancelSlot(e.target.parentElement.parentElement.getAttribute('data-slotid'));
     }
+});
+
+requestAssistanceSubmit.addEventListener('click', function(e) {
+    e.preventDefault();
+    requestAssistance();
 });
 
 mapModal.addEventListener('click', hideMap);
@@ -65,7 +72,6 @@ function hideMap() {
     main.className = main.className.replace(' map-modal--show', '');
 }
 
-// Cancel slot
 function cancelSlot(slotId) {
     var data = 'slotId=' + slotId;
     var request = new XMLHttpRequest();
@@ -76,6 +82,30 @@ function cancelSlot(slotId) {
     request.onreadystatechange = function() {
         if(request.readyState == 4 && request.status == 200) {
             getSlots();
+        }
+    }
+
+    request.onerror = function() {
+        alert('Something went wrong. Please try again.');
+    }
+}
+
+function requestAssistance() {
+    var requestName     = document.getElementById('request-name').value;
+    var requestKentId   = document.getElementById('request-id').value;
+    var requestLocation = 'test';
+
+    var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestKentId=' + requestKentId + '&requestLocation=' + requestLocation;
+    var request = new XMLHttpRequest();
+    request.open('POST', '/php/requestAssistance.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(data);
+
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == 200) {
+            getSlots();
+            requestAssistanceToggle.checked = false;
+            window.scrollTo(0,0);
         }
     }
 
