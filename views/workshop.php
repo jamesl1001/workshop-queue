@@ -22,7 +22,7 @@
         <div id="user-slots"></div>
 
         <label id="request-assistance-btn" for="request-assistance-toggle"><i class="icon-add"></i><span>Request assistance</span></label>
-        <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack" checked />
+        <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack"/>
 
         <div id="request-assistance-modal">
             <div class="request-assistance-form-row">
