@@ -1,5 +1,6 @@
 // Init
 var main                    = document.getElementById('main');
+var workshopSlotCount       = document.getElementById('workshop-slot-count');
 var userSlotsWrapper        = document.getElementById('user-slots');
 var requestAssistanceSubmit = document.getElementById('request-submit');
 var requestAssistanceToggle = document.getElementById('request-assistance-toggle');
@@ -56,6 +57,8 @@ function getSlots() {
             var response = request.responseText;
             if(response) {
                 userSlotsWrapper.innerHTML = response;
+                var slotCount = document.getElementsByClassName('user-slot').length;
+                workshopSlotCount.innerHTML = slotCount;
             } else {
                 userSlotsWrapper.innerHTML = '<h2>There is currently no one in need of assistance.</h2>';
             }

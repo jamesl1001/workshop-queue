@@ -8,7 +8,7 @@
         </div>
         <div class="full-width">
             <p id="workshop-room"><i class="icon-pc"></i> <?= $workshop->room; ?></p>
-            <p id="workshop-users"><i class="icon-user"></i> <?= count($slots); ?></p>
+            <p id="workshop-users"><i class="icon-user"></i> <span id="workshop-slot-count"><?= count($slots); ?></span></p>
             <p id="workshop-time"><i class="icon-time"></i> <?= $workshop->time; ?> mins</p>
         </div>
     </div>
