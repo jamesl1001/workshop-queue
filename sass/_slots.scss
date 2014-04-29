@@ -15,16 +15,6 @@
     margin-bottom: 0;
 }
 
-.user-slot--me:hover {
-    .user-order {
-        display: none;
-    }
-
-    .user-cancel {
-        display: inline;
-    }
-}
-
 .user-order,
 .user-cancel {
     width: 60px;
@@ -39,7 +29,8 @@
 }
 
 .user-cancel {
-    display: none;
+    display: block;
+    right: 0;
     cursor: pointer;
     z-index: 2;
     font-size: 25px;
