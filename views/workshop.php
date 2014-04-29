@@ -22,26 +22,24 @@
         <div id="user-slots"></div>
 
         <label id="request-assistance-btn" for="request-assistance-toggle"><i class="icon-add"></i><span>Request assistance</span></label>
-        <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack"/>
+        <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack" checked />
 
         <div id="request-assistance-modal">
-            <form>
-                <div class="request-assistance-form-row">
-                    <label for="request-name">Name</label> <input type="text" id="request-name" required/>
-                </div>
+            <div class="request-assistance-form-row">
+                <label for="request-name">Name</label> <input type="text" id="request-name" required/>
+            </div>
 
-                <div class="request-assistance-form-row">
-                    <label for="request-id">Kent ID</label> <input type="text" id="request-id" required/>
-                </div>
+            <div class="request-assistance-form-row">
+                <label for="request-id">Kent ID</label> <input type="text" id="request-id" required/>
+            </div>
 
-                <div class="request-assistance-form-row">
-                    <label for="request-seat">Seat</label> <img src="/img/room-<?= $workshop->room; ?>.png"/>
-                </div>
+            <div class="request-assistance-form-row">
+                <label for="request-seat">Seat</label> <img src="/img/room-<?= $workshop->room; ?>.png"/>
+            </div>
 
-                <div class="request-assistance-form-row">
-                    <i class="icon-add"></i><input type="submit" value="done" id="request-submit"/>
-                </div>
-            </form>
+            <div class="request-assistance-form-row">
+                <div id="request-submit"><i class="icon-add"></i>Done</div>
+            </div>
         </div>
 
         <div id="map-modal">

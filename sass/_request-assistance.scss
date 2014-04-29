@@ -94,12 +94,9 @@
         width: 88%;
     }
 
-    input[type=submit] {
-        width: 86px;
-        background: none;
-        border: 0;
-        outline: 0;
-        position: relative;
+    #request-submit {
+        width: 90px;
+        float: right;
         padding: 5px;
         cursor: pointer;
         color: $mgrey;
@@ -111,18 +108,13 @@
             color: $dgrey;
         }
 
-        &:focus {
-            width: 84px;
-            border: 1px solid $blue;
+        &:hover i {
+            color: $dgrey;
         }
-    }
 
-    i {
-        position: absolute;
-        right: 75px;
-        color: $mgrey;
-        font-size: 25px;
-        line-height: 50px;
+        i {
+            margin-right: 10px;
+        }
     }
 
     &:last-child {
@@ -156,18 +148,9 @@
             font-size: 20px;
         }
 
-        input[type=submit] {
-            width: 121px;
+        #request-submit {
+            width: 124px;
             font-size: 30px;
-
-            &:focus {
-                width: 119px;
-            }
-        }
-
-        i {
-            right: 100px;
-            font-size: 35px;
         }
     }
 }
