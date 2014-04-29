@@ -98,21 +98,25 @@ function requestAssistance() {
     var requestKentId   = document.getElementById('request-id').value;
     var requestLocation = 'test';
 
-    var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestKentId=' + requestKentId + '&requestLocation=' + requestLocation;
-    var request = new XMLHttpRequest();
-    request.open('POST', '/php/requestAssistance.php', true);
-    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    request.send(data);
+    if(requestName && requestKentId && requestLocation) {
+        var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestKentId=' + requestKentId + '&requestLocation=' + requestLocation;
+        var request = new XMLHttpRequest();
+        request.open('POST', '/php/requestAssistance.php', true);
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.send(data);
 
-    request.onreadystatechange = function() {
-        if(request.readyState == 4 && request.status == 200) {
-            getSlots();
-            requestAssistanceToggle.checked = false;
-            window.scrollTo(0,0);
+        request.onreadystatechange = function() {
+            if(request.readyState == 4 && request.status == 200) {
+                getSlots();
+                requestAssistanceToggle.checked = false;
+                window.scrollTo(0,0);
+            }
         }
-    }
 
-    request.onerror = function() {
-        alert('Something went wrong. Please try again.');
+        request.onerror = function() {
+            alert('Something went wrong. Please try again.');
+        }
+    } else {
+        alert('All fields are required.');
     }
 }
