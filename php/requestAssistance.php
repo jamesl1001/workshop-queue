@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 require('db.php');
 
 $workshopId      = $_POST['workshopId'];
@@ -13,3 +14,5 @@ $sth->bindParam(':requestName', $requestName);
 $sth->bindParam(':requestKentId', $requestKentId);
 $sth->bindParam(':requestLocation', $requestLocation);
 $sth->execute();
+
+$_SESSION['mySlotId'] = $dbh->lastInsertId();
