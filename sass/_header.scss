@@ -165,6 +165,10 @@ header {
         text-indent: 4px;
         line-height: 68px;
 
+        &:hover {
+            box-shadow: 0 0 2px $dgrey;
+        }
+
         &:hover i {
             color: $dgrey;
         }

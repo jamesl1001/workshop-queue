@@ -9,6 +9,14 @@
     overflow: hidden;
     white-space: nowrap;
 
+    &:hover {
+        color: $dgrey;
+    }
+
+    &:hover i {
+        color: $dgrey;
+    }
+
     i {
         width: 60px;
         display: inline-block;
@@ -94,10 +102,14 @@
         position: relative;
         padding: 5px;
         cursor: pointer;
-        color: $blue;
+        color: $mgrey;
         font-size: 20px;
         text-align: right;
         line-height: 40px;
+
+        &:hover {
+            color: $dgrey;
+        }
 
         &:focus {
             width: 84px;
@@ -108,7 +120,7 @@
     i {
         position: absolute;
         right: 75px;
-        color: $blue;
+        color: $mgrey;
         font-size: 25px;
         line-height: 50px;
     }
