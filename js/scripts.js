@@ -64,8 +64,22 @@ function getSlots() {
 }
 
 function showMap(seat) {
-    main.className = 'map-modal--show';
-    // mapModalMarker.innerHTML = seat;
+    var seatSplit = seat.split('-');
+
+
+    var x = new XMLHttpRequest();
+    x.open('GET', '/layouts/' + seatSplit[0] + '.xml', true);
+    x.onreadystatechange = function() {
+        if(x.readyState == 4 && x.status == 200) {
+            var xml = x.responseXML;
+            var seatX = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@x)', xml, null, 0, null).stringValue;
+            var seatY = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@y)', xml, null, 0, null).stringValue;
+            mapModalMarker.style.top  = seatY + '%';
+            mapModalMarker.style.left = seatX + '%';
+            main.className = 'map-modal--show';
+        }
+    };
+    x.send(null);
 }
 
 function hideMap() {
