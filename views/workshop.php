@@ -34,7 +34,14 @@
             </div>
 
             <div class="request-assistance-form-row">
-                <label for="request-seat">Seat</label> <img src="/img/room-<?= $workshop->room; ?>.png"/>
+                <label for="request-seat">Seat</label>
+                <div id="request-map-wrapper">
+                    <img src="/img/room-<?= $workshop->room; ?>.png"/>
+                    <div id="request-map-radios">
+                        <input type="radio" name="seat" value="jcs4-1" class="request-map-radio" style="top:10%; left:10%;"/>
+                        <input type="radio" name="seat" value="jcs4-2" class="request-map-radio" style="top:50%; left:50%;"/>
+                    </div>
+                </div>
             </div>
 
             <div class="request-assistance-form-row">
@@ -44,8 +51,10 @@
 
         <div id="map-modal">
             <h2><?= $workshop->room; ?></h2>
-            <img src="/img/room-<?= $workshop->room; ?>.png" title="<?= $workshop->room; ?>"/>
-            <div id="map-modal-marker"></div>
+            <div id="map-modal-wrapper">
+                <img src="/img/room-<?= $workshop->room; ?>.png" title="<?= $workshop->room; ?>"/>
+                <div id="map-modal-marker" style="top:50%; left:50%;"></div>
+            </div>
         </div>
     </div>
 </div>

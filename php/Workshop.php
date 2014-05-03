@@ -14,7 +14,7 @@ class Workshop {
     static function getWorkshopSlots($id) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT slotId, name, kentId, location FROM slots WHERE workshopId='$id'");
+        $sth = $dbh->query("SELECT slotId, name, kentId, seat FROM slots WHERE workshopId='$id'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetchAll();
 

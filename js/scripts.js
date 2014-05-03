@@ -21,11 +21,11 @@ setInterval(function() {
 // Listeners
 userSlotsWrapper.addEventListener('click', function(e) {
     if(e.target.className == 'user-name') {
-        showMap(e.target.parentElement.getAttribute('data-location'));
+        showMap(e.target.parentElement.getAttribute('data-seat'));
     }
 
     if(e.target.className == 'user-id') {
-        showMap(e.target.parentElement.parentElement.getAttribute('data-location'));
+        showMap(e.target.parentElement.parentElement.getAttribute('data-seat'));
     }
 
     if(e.target.className == 'user-cancel') {
@@ -63,13 +63,13 @@ function getSlots() {
     }
 }
 
-function showMap(location) {
-    main.className += ' map-modal--show';
-    mapModalMarker.innerHTML = location;
+function showMap(seat) {
+    main.className = 'map-modal--show';
+    // mapModalMarker.innerHTML = seat;
 }
 
 function hideMap() {
-    main.className = main.className.replace(' map-modal--show', '');
+    main.className = main.className.replace('map-modal--show', '');
 }
 
 function cancelSlot(slotId) {
@@ -95,12 +95,19 @@ function cancelSlot(slotId) {
 }
 
 function requestAssistance() {
-    var requestName     = document.getElementById('request-name').value;
-    var requestKentId   = document.getElementById('request-id').value;
-    var requestLocation = 'test';
+    var requestName   = document.getElementById('request-name').value;
+    var requestKentId = document.getElementById('request-id').value;
+    var requestSeat;
 
-    if(requestName && requestKentId && requestLocation) {
-        var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestKentId=' + requestKentId + '&requestLocation=' + requestLocation;
+    var requestSeats = document.getElementsByName('seat');
+    for(var i = 0, l = requestSeats.length; i < l; i++) {
+        if(requestSeats[i].checked) {
+            requestSeat = requestSeats[i].value;
+        }
+    }
+
+    if(requestName && requestKentId && requestSeat) {
+        var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestKentId=' + requestKentId + '&requestSeat=' + requestSeat;
         var request = new XMLHttpRequest();
         request.open('POST', '/php/requestAssistance.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
