@@ -1,7 +1,7 @@
 <?php
 
 class Workshop {
-    static function getWorkshopData($id) {
+    static function getData($id) {
         require('db.php');
 
         $sth = $dbh->query("SELECT workshopId, timestamp, module, type, lecturer, date, room, time FROM workshops WHERE workshopId='$id'");
@@ -11,7 +11,7 @@ class Workshop {
         return $result;
     }
 
-    static function getWorkshopSlots($id) {
+    static function getSlots($id) {
         require('db.php');
 
         $sth = $dbh->query("SELECT slotId, name, kentId, seat FROM slots WHERE workshopId='$id'");
@@ -19,5 +19,9 @@ class Workshop {
         $result = $sth->fetchAll();
 
         return $result;
+    }
+
+    static function getSeats($id) {
+        return simplexml_load_file("layouts/$id.xml");
     }
 }

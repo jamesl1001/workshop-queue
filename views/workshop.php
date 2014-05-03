@@ -38,8 +38,9 @@
                 <div id="request-map-wrapper">
                     <img src="/img/room-<?= $workshop->room; ?>.png"/>
                     <div id="request-map-radios">
-                        <input type="radio" name="seat" value="jcs4-1" class="request-map-radio" style="top:10%; left:10%;"/>
-                        <input type="radio" name="seat" value="jcs4-2" class="request-map-radio" style="top:50%; left:50%;"/>
+                        <?php foreach($seats->pc as $seat): ?>
+                            <input type="radio" name="seat" value="jcs4-<?= $seat['id']; ?>" class="request-map-radio" style="top:<?= $seat['y']; ?>%; left:<?= $seat['x']; ?>%;"/>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@ session_start();
 $workshopId = $_POST['workshopId'];
 
 require_once('Workshop.php');
-$slots = Workshop::getWorkshopSlots($workshopId);
+$slots = Workshop::getSlots($workshopId);
 
 $i = 1;
 
