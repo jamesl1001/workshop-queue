@@ -66,16 +66,15 @@ function getSlots() {
 function showMap(seat) {
     var seatSplit = seat.split('-');
 
-
     var x = new XMLHttpRequest();
     x.open('GET', '/layouts/' + seatSplit[0] + '.xml', true);
     x.onreadystatechange = function() {
         if(x.readyState == 4 && x.status == 200) {
             var xml = x.responseXML;
-            var seatX = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@x)', xml, null, 0, null).stringValue;
-            var seatY = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@y)', xml, null, 0, null).stringValue;
-            mapModalMarker.style.top  = seatY + '%';
-            mapModalMarker.style.left = seatX + '%';
+            var seatTop  = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@top)', xml, null, 0, null).stringValue;
+            var seatLeft = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@left)', xml, null, 0, null).stringValue;
+            mapModalMarker.style.top  = seatTop + '%';
+            mapModalMarker.style.left = seatLeft + '%';
             main.className = 'map-modal--show';
         }
     };

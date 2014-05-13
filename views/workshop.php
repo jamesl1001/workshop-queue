@@ -39,7 +39,7 @@
                     <img src="/img/room-<?= $workshop->room; ?>.png"/>
                     <div id="request-map-radios">
                         <?php foreach($seats->pc as $seat): ?>
-                            <input type="radio" name="seat" value="jcs4-<?= $seat['id']; ?>" class="request-map-radio" style="top:<?= $seat['y']; ?>%; left:<?= $seat['x']; ?>%;"/>
+                            <input type="radio" name="seat" value="jcs4-<?= $seat['id']; ?>" class="request-map-radio" style="top:<?= $seat['top']; ?>%; left:<?= $seat['left']; ?>%;"/>
                         <?php endforeach; ?>
                     </div>
                 </div>

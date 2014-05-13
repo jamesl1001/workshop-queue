@@ -1,4 +1,4 @@
 <layout>
-    <pc id="1" x="80" y="0"/>
-    <pc id="2" x="70" y="0"/>
+    <pc id="1" top="5.7" left="68.4"/>
+    <pc id="2" top="5.7" left="59.2"/>
 </layout>
