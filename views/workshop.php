@@ -30,7 +30,7 @@
             </div>
 
             <div class="request-assistance-form-row">
-                <label for="request-id">Kent ID</label> <input type="text" id="request-id" required/>
+                <label for="request-id">Kent ID</label> <input type="text" id="request-id" maxlength="5" required/>
             </div>
 
             <div class="request-assistance-form-row">
