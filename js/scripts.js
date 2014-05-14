@@ -142,9 +142,13 @@ function requestAssistance() {
 
         request.onreadystatechange = function() {
             if(request.readyState == 4 && request.status == 200) {
-                getSlots();
-                requestAssistanceToggle.checked = false;
-                window.scrollTo(0,0);
+                if(request.responseText == 'duplicate') {
+                    alert('You have already requested assistance!');
+                } else {
+                    getSlots();
+                    requestAssistanceToggle.checked = false;
+                    window.scrollTo(0,0);
+                }
             }
         }
 
