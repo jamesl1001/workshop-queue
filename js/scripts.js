@@ -53,7 +53,22 @@ function getSlots() {
         if(request.readyState == 4 && request.status == 200) {
             var response = request.responseText;
             if(response) {
-                userSlotsWrapper.innerHTML = response;
+                var responseSplit = response.split('~');
+                var seats = responseSplit[0].split(',');
+
+                var radios = document.getElementsByClassName('cell-radio');
+
+                for(var i = 0, l = radios.length; i < l; i++) {
+                    var radio = document.getElementById(radios[i].id);
+
+                    if(seats.indexOf(radios[i].id) !== -1) {
+                        radio.disabled = true;
+                    } else {
+                        radio.disabled = false;
+                    }
+                }
+
+                userSlotsWrapper.innerHTML = responseSplit[1];
                 var slotCount = document.getElementsByClassName('user-slot').length;
                 workshopSlotCount.innerHTML = slotCount;
             } else {

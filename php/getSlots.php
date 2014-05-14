@@ -7,6 +7,12 @@ $workshopId = $_POST['workshopId'];
 require_once('Workshop.php');
 $slots = Workshop::getSlots($workshopId);
 
+foreach($slots as $slot) {
+    echo $slot->seat . ',';
+}
+
+echo '~';
+
 $i = 1;
 
 foreach($slots as $slot) {
