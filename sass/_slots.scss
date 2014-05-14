@@ -45,21 +45,33 @@
     }
 }
 
-.user-name {
+.user-info {
     width: 100%;
     display: block;
     position: absolute;
     padding: 0 60px;
-    color: $blue;
     font-size: 20px;
     line-height: 80px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+
+    & > span {
+        display: block;
+        float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }
 
-.user-id {
+.user-name {
+    width: 60%;
+    color: $blue;
+}
+
+.user-id,
+.user-seat {
+    width: 20%;
     color: $mgrey;
+    font-size: 14px;
 }
 
 .user-map-btn {
@@ -107,10 +119,15 @@
         font-size: 30px;
     }
 
-    .user-name {
+    .user-info {
         padding: 0 80px;
         font-size: 30px;
         line-height: 100px;
+    }
+
+    .user-id,
+    .user-seat {
+        font-size: 20px;
     }
 
     .user-map-btn {

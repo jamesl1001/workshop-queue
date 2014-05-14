@@ -20,11 +20,11 @@ setInterval(function() {
 
 // Listeners
 userSlotsWrapper.addEventListener('click', function(e) {
-    if(e.target.className == 'user-name') {
+    if(e.target.className == 'user-info') {
         showMap(e.target.parentElement.getAttribute('data-seat'));
     }
 
-    if(e.target.className == 'user-id') {
+    if(e.target.className.match('user-name|user-id|user-seat')) {
         showMap(e.target.parentElement.parentElement.getAttribute('data-seat'));
     }
 
