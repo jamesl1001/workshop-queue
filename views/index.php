@@ -2,7 +2,7 @@
     <div class="centre">
         <img src="/img/logo.png" alt="Workshop Queue logo" id="header-img"/>
         <div id="header-info">
-            <h1 id="header-title">Workshop Queue</h1>
+            <h1 id="header-title">Workshop Queue <sup>beta</sup></h1>
             <p>Explain what WQ is here...</p>
         </div>
     </div>

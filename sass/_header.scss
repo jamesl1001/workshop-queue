@@ -21,6 +21,11 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+
+    sup {
+        color: $mgrey;
+        font-size: 12px;
+    }
 }
 
 .full-width {
@@ -93,6 +98,10 @@ header {
     #header-title {
         margin: 20px 80px 20px 0;
         font-size: 40px;
+
+        sup {
+            font-size: 20px;
+        }
     }
 
     #workshop-lecturer,
