@@ -7,6 +7,7 @@ footer, header {
 }
 
 body {
+    min-width: 420px;
     background: $dgrey;
     margin: 0;
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

@@ -6,7 +6,7 @@ $workshopId = $url[1];
 require_once('php/Workshop.php');
 $workshop = Workshop::getData($workshopId);
 $slots    = Workshop::getSlots($workshopId);
-$seats    = Workshop::getSeats($workshop->room);
+$map      = Workshop::generateMap($workshop->room);
 
 if($workshop) {
     $file = 'workshop';

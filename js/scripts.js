@@ -66,7 +66,6 @@ function getSlots() {
 function showMap(seat) {
     var seatSplit = seat.split('-');
 
-
     var x = new XMLHttpRequest();
     x.open('GET', '/layouts/' + seatSplit[0] + '.xml', true);
     x.onreadystatechange = function() {

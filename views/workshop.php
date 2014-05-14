@@ -36,12 +36,7 @@
             <div class="request-assistance-form-row">
                 <label for="request-seat">Seat</label>
                 <div id="request-map-wrapper">
-                    <img src="/img/room-<?= $workshop->room; ?>.png"/>
-                    <div id="request-map-radios">
-                        <?php foreach($seats->pc as $seat): ?>
-                            <input type="radio" name="seat" value="jcs4-<?= $seat['id']; ?>" class="request-map-radio" style="top:<?= $seat['y']; ?>%; left:<?= $seat['x']; ?>%;"/>
-                        <?php endforeach; ?>
-                    </div>
+                    <?= $map; ?>
                 </div>
             </div>
 

@@ -44,3 +44,81 @@
         padding: 40px;
     }
 }
+
+
+
+///////////////////////////////
+
+
+
+
+.map {
+    width: 100%;
+    border: 5px solid #CCC;
+    display: table;
+}
+
+.row {
+    display: table-row;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    display: table-cell;
+    position: relative;
+    padding-top: 25px;
+    text-align: center;
+}
+
+.cell label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+    line-height: 30px;
+}
+
+.cell input {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.cell input:checked + label {
+    box-shadow: inset 0 0 2px #69C;
+}
+
+.cell--pc {
+    background: #EEE;
+    box-shadow: inset 0 0 1px #CCC;
+
+    &:hover {
+        box-shadow: inset 0 0 1px #666;
+    }
+}
+
+.cell--empty,
+.cell--door {
+    background: #FFF;
+}
+
+.cell--door i {
+    position: relative;
+    top: -10px;
+}
+
+@media (min-width: 800px) {
+    .cell {
+        width: 60px;
+        height: 60px;
+        padding-top: 30px;
+    }
+
+    .cell label {
+        line-height: 40px;
+    }
+}
