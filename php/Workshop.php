@@ -30,6 +30,9 @@ class Workshop {
 
         $csv = file_get_contents("https://docs.google.com/spreadsheets/d/1OK2yCPPgjHYV7Lj-7dHLZSu_ysnRBpX9froG70PF0xA/export?gid=$gid[0]&format=csv");
 
+        $_SESSION['gid'] = $gid;
+        $_SESSION['csv'] = $csv;
+
         $lines = explode("\n", $csv);
 
         $array = array();

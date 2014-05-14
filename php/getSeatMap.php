@@ -1,15 +1,12 @@
 <?php
 
+session_start();
+
 $room = $_POST['room'];
 $seat = $_POST['seat'];
 
-require('db.php');
-
-$sth = $dbh->query("SELECT gid FROM roomgid WHERE room='$room'");
-$sth->setFetchMode(PDO::FETCH_NUM);
-$gid = $sth->fetch();
-
-$csv = file_get_contents("https://docs.google.com/spreadsheets/d/1OK2yCPPgjHYV7Lj-7dHLZSu_ysnRBpX9froG70PF0xA/export?gid=$gid[0]&format=csv");
+$gid = $_SESSION['gid'];
+$csv = $_SESSION['csv'];
 
 $lines = explode("\n", $csv);
 
