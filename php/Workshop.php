@@ -21,7 +21,7 @@ class Workshop {
         return $result;
     }
 
-    static function generateMap($room) {
+    static function generateRequestAssistanceMap($room) {
         require('db.php');
 
         $sth = $dbh->query("SELECT gid FROM roomgid WHERE room='$room'");

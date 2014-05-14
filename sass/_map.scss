@@ -20,7 +20,7 @@
     }
 }
 
-.map-modal--show #map-modal {
+#map-modal.map-modal--show {
     display: block;
 }
 
@@ -29,14 +29,6 @@
     max-width: 1120px;
     margin: auto;
     position: relative;
-}
-
-#map-modal-marker {
-    width: 20px;
-    height: 20px;
-    background: green;
-    border-radius: 50%;
-    position: absolute;
 }
 
 @media (min-width: 800px) {

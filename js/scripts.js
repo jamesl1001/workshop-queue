@@ -5,7 +5,7 @@ var userSlotsWrapper        = document.getElementById('user-slots');
 var requestAssistanceSubmit = document.getElementById('request-submit');
 var requestAssistanceToggle = document.getElementById('request-assistance-toggle');
 var mapModal                = document.getElementById('map-modal');
-var mapModalMarker          = document.getElementById('map-modal-marker');
+var mapModalWrapper         = document.getElementById('map-modal-wrapper');
 
 getSlots();
 
@@ -66,23 +66,22 @@ function getSlots() {
 function showMap(seat) {
     var seatSplit = seat.split('-');
 
+    var data = 'room=' + seatSplit[0] + '&seat=' + seatSplit[1];
     var x = new XMLHttpRequest();
-    x.open('GET', '/layouts/' + seatSplit[0] + '.xml', true);
+    x.open('POST', '/php/getSeatMap.php', true);
+    x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    x.send(data);
     x.onreadystatechange = function() {
         if(x.readyState == 4 && x.status == 200) {
-            var xml = x.responseXML;
-            var seatX = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@x)', xml, null, 0, null).stringValue;
-            var seatY = xml.evaluate('string(//layout/pc[@id=' + seatSplit[1] + ']/@y)', xml, null, 0, null).stringValue;
-            mapModalMarker.style.top  = seatY + '%';
-            mapModalMarker.style.left = seatX + '%';
-            main.className = 'map-modal--show';
+            var response = x.responseText;
+            mapModalWrapper.innerHTML = response;
+            mapModal.className = 'map-modal--show';
         }
-    };
-    x.send(null);
+    }
 }
 
 function hideMap() {
-    main.className = main.className.replace('map-modal--show', '');
+    mapModal.className = mapModal.className.replace('map-modal--show', '');
 }
 
 function cancelSlot(slotId) {

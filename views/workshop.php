@@ -47,10 +47,7 @@
 
         <div id="map-modal">
             <h2><?= $workshop->room; ?></h2>
-            <div id="map-modal-wrapper">
-                <img src="/img/room-<?= $workshop->room; ?>.png" title="<?= $workshop->room; ?>"/>
-                <div id="map-modal-marker"></div>
-            </div>
+            <div id="map-modal-wrapper"></div>
         </div>
     </div>
 </div>

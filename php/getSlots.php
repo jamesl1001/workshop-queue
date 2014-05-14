@@ -12,7 +12,7 @@ $i = 1;
 foreach($slots as $slot) {
     echo '<div class="user-slot" data-slotid="' . $slot->slotId . '" data-seat="' . $slot->seat . '">
               <span class="user-order">' . $i . '</span>
-              <span class="user-name">' . $slot->name . ' <span class="user-id">' . $slot->kentId . '</span></span>';
+              <span class="user-name">' . $slot->name . ' <span class="user-id">' . $slot->kentId . '</span> <span class="user-seat">' . $slot->seat . '</span></span>';
     if($slot->slotId == $_SESSION['mySlotId']) {
         echo '<span class="user-cancel"><i class="icon-cancel"></i></span>';
     }
