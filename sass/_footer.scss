@@ -6,3 +6,26 @@ footer a {
         border-bottom: 1px solid $mgrey;
     }
 }
+
+.jal,
+.admin {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    .jal,
+    .admin {
+        width: auto;
+    }
+
+    .jal {
+        float: left;
+        text-align: left;
+    }
+
+    .admin {
+        float: right;
+        text-align: right;
+    }
+}
