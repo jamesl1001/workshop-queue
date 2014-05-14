@@ -1,3 +1,5 @@
+// map modal
+
 #map-modal {
     width: 100%;
     height: 100%;
@@ -37,12 +39,7 @@
     }
 }
 
-
-
-///////////////////////////////
-
-
-
+// map
 
 .map {
     width: 100%;
@@ -63,7 +60,7 @@
     text-align: center;
 }
 
-.cell label {
+.cell-label {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -71,6 +68,7 @@
     left: 0;
     cursor: pointer;
     z-index: 1;
+    color: #CCC;
     line-height: 30px;
 }
 
@@ -80,7 +78,7 @@
     z-index: 2;
 }
 
-.cell input:checked + label {
+.cell input:checked + .cell-label {
     box-shadow: inset 0 0 2px #69C;
 }
 
@@ -103,6 +101,10 @@
     top: -10px;
 }
 
+.cell--active {
+    box-shadow: inset 0 0 2px #69C;
+}
+
 @media (min-width: 800px) {
     .cell {
         width: 60px;
@@ -110,7 +112,7 @@
         padding-top: 30px;
     }
 
-    .cell label {
+    .cell-label {
         line-height: 40px;
     }
 }

@@ -61,12 +61,12 @@
     margin-bottom: 20px;
     overflow: hidden;
 
-    label,
+    > label,
     input {
         display: inline-block;
     }
 
-    label {
+    > label {
         width: 12%;
         float: left;
         color: $mgrey;
@@ -146,7 +146,7 @@
     }
 
     .request-assistance-form-row {
-        label {
+        > label {
             font-size: 20px;
         }
 

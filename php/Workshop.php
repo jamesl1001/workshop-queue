@@ -53,7 +53,7 @@ class Workshop {
                         $html .= '<div class="cell cell--empty"></div>';
                         break;
                     case is_numeric($cell):
-                        $html .= "<div class=\"cell cell--pc\"><input type=\"radio\" name=\"seat\" id=\"$room-$cell\" value=\"$room-$cell\"/><label for=\"$room-$cell\">$cell</label></div>";
+                        $html .= "<div class=\"cell cell--pc\"><input type=\"radio\" name=\"seat\" id=\"$room-$cell\" value=\"$room-$cell\"/><label for=\"$room-$cell\" class=\"cell-label\">$cell</label></div>";
                         break;
                     case 'D':
                         $html .= '<div class="cell cell--door" title="Door"><i class="icon-exit"></i></div>';

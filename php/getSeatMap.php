@@ -29,9 +29,9 @@ foreach($array as $row) {
                 break;
             case is_numeric($cell):
                 if($cell == $seat) {
-                    $html .= "<div class=\"cell cell--pc\"><input type=\"radio\" name=\"seat\" id=\"$room-$cell\" value=\"$room-$cell\" disabled checked/><label for=\"$room-$cell\">$cell</label></div>";
+                    $html .= "<div class=\"cell cell--pc cell--active\"><div class=\"cell-label\">$cell</div></div>";
                 } else {
-                    $html .= "<div class=\"cell cell--pc\"><input type=\"radio\" name=\"seat\" id=\"$room-$cell\" value=\"$room-$cell\" disabled/><label for=\"$room-$cell\">$cell</label></div>";
+                    $html .= "<div class=\"cell cell--pc\"><div class=\"cell-label\">$cell</div></div>";
                 }
                 break;
             case 'D':
