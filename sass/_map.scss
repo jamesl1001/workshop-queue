@@ -23,14 +23,15 @@
 }
 
 #map-modal.map-modal--show {
-    display: block;
+    display: table;
 }
 
 #map-modal-wrapper {
     width: 100%;
     max-width: 1120px;
-    margin: auto;
-    position: relative;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
 }
 
 @media (min-width: 800px) {
