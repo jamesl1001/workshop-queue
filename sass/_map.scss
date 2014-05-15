@@ -61,7 +61,7 @@
 }
 
 .cell-radio:disabled + .cell-label:hover {
-    box-shadow: none;
+    box-shadow: inset 0 0 1px $mgrey;
 }
 
 @media (min-width: 800px) {
