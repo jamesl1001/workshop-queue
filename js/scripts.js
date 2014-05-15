@@ -85,6 +85,7 @@ function getSlots() {
 }
 
 function showMap(seat) {
+    mapModal.className = 'map-modal--show';
     var seatSplit = seat.split('-');
 
     var data = 'room=' + seatSplit[0] + '&seat=' + seatSplit[1];
@@ -96,7 +97,7 @@ function showMap(seat) {
         if(x.readyState == 4 && x.status == 200) {
             var response = x.responseText;
             mapModalWrapper.innerHTML = response;
-            mapModal.className = 'map-modal--show';
+            mapModal.className += ' map-modal--done';
         }
     }
 }

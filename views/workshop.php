@@ -48,6 +48,7 @@
         </div>
 
         <div id="map-modal">
+            <i id="map-modal-spinner" class="icon-spinner"></i>
             <div id="map-modal-wrapper"></div>
         </div>
     </div>
