@@ -13,6 +13,14 @@
         <h2>Which workshop are you in?</h2>
 
         <div id="workshop-cards">
+            <?php if(isset($_SESSION['admin']) && $_SESSION['admin']): ?>
+
+                <a href="/new-workshop" class="workshop-card workshop-card--add">
+                    <i class="icon-add"></i>
+                </a>
+
+            <?php endif; ?>
+
             <?php foreach($workshops as $workshop): ?>
 
                 <a href="/workshop/<?= $workshop->workshopId; ?>" class="workshop-card">
