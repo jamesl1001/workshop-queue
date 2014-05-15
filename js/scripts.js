@@ -39,6 +39,12 @@ userSlotsWrapper.addEventListener('click', function(e) {
 
 requestAssistanceSubmit.addEventListener('click', requestAssistance);
 
+document.addEventListener('keydown', function(e) {
+    if(e.which == 13 && requestAssistanceToggle.checked == true) {
+        requestAssistance();
+    }
+});
+
 mapModal.addEventListener('click', hideMap);
 
 // Events
