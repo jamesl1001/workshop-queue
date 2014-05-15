@@ -45,6 +45,8 @@
             <div class="request-assistance-form-row">
                 <div id="request-submit" tabindex="4"><i class="icon-add"></i>Request</div>
             </div>
+
+            <i id="request-assistance-spinner" class="icon-spinner"></i>
         </div>
 
         <div id="map-modal">

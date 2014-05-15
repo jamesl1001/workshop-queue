@@ -2,6 +2,7 @@
 var main                    = document.getElementById('main');
 var workshopSlotCount       = document.getElementById('workshop-slot-count');
 var userSlotsWrapper        = document.getElementById('user-slots');
+var requestAssistanceModal  = document.getElementById('request-assistance-modal');
 var requestAssistanceSubmit = document.getElementById('request-submit');
 var requestAssistanceToggle = document.getElementById('request-assistance-toggle');
 var mapModal                = document.getElementById('map-modal');
@@ -129,6 +130,8 @@ function cancelSlot(slotId) {
 }
 
 function requestAssistance() {
+    requestAssistanceModal.className = 'requesting';
+
     var requestName   = document.getElementById('request-name').value;
     var requestKentId = document.getElementById('request-id').value;
     var requestSeat;
@@ -156,13 +159,20 @@ function requestAssistance() {
                     requestAssistanceToggle.checked = false;
                     window.scrollTo(0,0);
                 }
+                stopRequesting();
             }
         }
 
         request.onerror = function() {
             alert('Something went wrong. Please try again.');
+            stopRequesting();
         }
     } else {
         alert('All fields are required.');
+        stopRequesting();
+    }
+
+    function stopRequesting() {
+        requestAssistanceModal.className = '';
     }
 }
