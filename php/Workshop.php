@@ -33,12 +33,12 @@ class Workshop {
         $_SESSION['gid'] = $gid;
         $_SESSION['csv'] = $csv;
 
-        $lines = explode("\n", $csv);
-
         $array = array();
 
-        foreach ($lines as $line) {
-            $array[] = str_getcsv($line);
+        $lines = explode("\n", $csv);
+
+        foreach($lines as $line) {
+            $array[] = explode(',', $line);
         }
 
         $html = '';

@@ -12,8 +12,8 @@ $lines = explode("\n", $csv);
 
 $array = array();
 
-foreach ($lines as $line) {
-    $array[] = str_getcsv($line);
+foreach($lines as $line) {
+    $array[] = explode(',', $line);
 }
 
 $html = '';
