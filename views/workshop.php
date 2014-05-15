@@ -19,7 +19,9 @@
 
 <div id="main">
     <div class="centre">
-        <div id="user-slots"></div>
+        <div id="user-slots">
+            <i class="icon-spinner"></i>
+        </div>
 
         <label id="request-assistance-btn" for="request-assistance-toggle"><i class="icon-add"></i><span>Request assistance</span></label>
         <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack"/>
