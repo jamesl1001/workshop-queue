@@ -43,7 +43,7 @@
             </div>
 
             <div class="request-assistance-form-row">
-                <div id="request-submit" tabindex="4"><i class="icon-add"></i>Done</div>
+                <div id="request-submit" tabindex="4"><i class="icon-add"></i>Request</div>
             </div>
         </div>
 
