@@ -26,11 +26,11 @@
 
         <div id="request-assistance-modal">
             <div class="request-assistance-form-row">
-                <label for="request-name">Name</label> <input type="text" id="request-name" required/>
+                <label for="request-name">Name</label> <input type="text" id="request-name" tabindex="1" required/>
             </div>
 
             <div class="request-assistance-form-row">
-                <label for="request-id">Kent ID</label> <input type="text" id="request-id" maxlength="5" required/>
+                <label for="request-id">Kent ID</label> <input type="text" id="request-id" maxlength="5" tabindex="2" required/>
             </div>
 
             <div class="request-assistance-form-row">
@@ -41,7 +41,7 @@
             </div>
 
             <div class="request-assistance-form-row">
-                <div id="request-submit"><i class="icon-add"></i>Done</div>
+                <div id="request-submit" tabindex="4"><i class="icon-add"></i>Done</div>
             </div>
         </div>
 
