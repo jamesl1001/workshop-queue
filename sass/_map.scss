@@ -61,37 +61,8 @@
     text-align: center;
 }
 
-.cell-label {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    z-index: 1;
-    color: $mgrey;
-    line-height: 30px;
-}
-
-.cell input {
-    position: relative;
-    cursor: pointer;
-    z-index: 2;
-}
-
 .cell--pc {
     background: $lgrey;
-    box-shadow: inset 0 0 1px $mgrey;
-
-    &:hover {
-        box-shadow: inset 0 0 1px $dgrey;
-    }
-}
-
-.cell input:checked + .cell-label,
-.cell--active .cell-label {
-    background: $blue;
-    color: #FFF;
 }
 
 .cell--empty,
@@ -102,6 +73,39 @@
 .cell--door i {
     position: relative;
     top: -10px;
+}
+
+.cell-label {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+    color: $mgrey;
+    line-height: 30px;
+    box-shadow: inset 0 0 1px $mgrey;
+
+    &:hover {
+        box-shadow: inset 0 0 1px $dgrey;
+    }
+}
+
+.cell-radio {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.cell-radio:checked + .cell-label,
+.cell--active .cell-label {
+    background: $blue;
+    color: #FFF;
+}
+
+.cell-radio:disabled + .cell-label:hover {
+    box-shadow: none;
 }
 
 @media (min-width: 800px) {
