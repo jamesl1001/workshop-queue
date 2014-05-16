@@ -10,8 +10,6 @@ if(empty($path)) {                                  // HOME
     $file = 'index';
 } elseif(file_exists("views/$path.php")) {          // PAGE
     $file = $path;
-} elseif($path == 'admin') {
-    $file = 'admin/index';
 } else {                                            // NOT FOUND
     $file = '404';
 }
