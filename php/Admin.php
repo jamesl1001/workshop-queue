@@ -16,4 +16,23 @@ class Admin {
         unset($_SESSION['admin']);
         header('location: /');
     }
+
+    static function newWorkshop($moduleCode, $moduleName, $type, $lecturer, $date, $room, $time) {
+        require_once('db.php');
+
+        $timestamp = date("Y-m-d H:i:s");
+
+        $sth = $dbh->prepare("INSERT INTO workshops (timestamp, moduleCode, moduleName, type, lecturer, date, room, time) value (:timestamp, :moduleCode, :moduleName, :type, :lecturer, :date, :room, :time)");
+        $sth->bindParam(':timestamp', $timestamp);
+        $sth->bindParam(':moduleCode', $moduleCode);
+        $sth->bindParam(':moduleName', $moduleName);
+        $sth->bindParam(':type', $type);
+        $sth->bindParam(':lecturer', $lecturer);
+        $sth->bindParam(':date', $date);
+        $sth->bindParam(':room', $room);
+        $sth->bindParam(':time', $time);
+        $sth->execute();
+
+        return $dbh->lastInsertId();
+    }
 }
