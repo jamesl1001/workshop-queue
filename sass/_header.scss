@@ -94,6 +94,12 @@ header {
     }
 
     #header-title {
+        margin-top: 0;
+        margin-bottom: 7px;
+        font-size: 28px;
+    }
+
+    .workshop #header-title {
         margin: 0 60px 7px 0;
     }
 
@@ -116,12 +122,16 @@ header {
     }
 
     #header-title {
-        margin: 20px 80px 20px 0;
+        margin: 20px 0;
         font-size: 40px;
 
         sup {
             font-size: 20px;
         }
+    }
+
+    .workshop #header-title {
+        margin: 20px 80px 20px 0;
     }
 
     #workshop-lecturer,
