@@ -91,11 +91,11 @@ h2 {
         margin-left: 1%;
     }
 
-    .workshop-card:nth-child(4n+2) {
-        margin-right: 0;
-    }
-
     .workshop-card:nth-child(4n+1) {
         margin-left: 0;
+    }
+
+    .workshop-card:nth-child(4n+4) {
+        margin-right: 0;
     }
 }
