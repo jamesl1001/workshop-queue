@@ -1,7 +1,8 @@
 <header class="centre">
-    <img src="/img/404.jpg" alt="404" id="header-img"/>
+    <img src="/img/404.png" alt="404" id="header-img"/>
     <div id="header-info">
         <h1 id="header-title">404</h1>
+        <p>Page not found.</p>
     </div>
 </header>
 
