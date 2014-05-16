@@ -80,7 +80,6 @@ header {
 
 @media (min-width: 480px) {
     header {
-        height: 140px;
         text-align: left;
     }
 
@@ -109,7 +108,7 @@ header {
 
 @media (min-width: 800px) {
     header {
-        height: 380px;
+        min-height: 380px;
     }
 
     #header-img {
