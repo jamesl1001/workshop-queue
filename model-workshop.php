@@ -7,7 +7,7 @@ require_once('php/Workshop.php');
 $workshop = Workshop::getData($workshopId);
 
 if($workshop) {
-    $file  = 'workshop';
+    $file  = 'workshop-template';
     $slots = Workshop::getSlots($workshopId);
     $map   = Workshop::generateRequestAssistanceMap($workshop->room);
 } else {
