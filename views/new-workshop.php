@@ -11,32 +11,48 @@
 <div id="main">
     <div class="centre">
         <form action="" method="post">
-            <label for="new-workshop-module-code">Module code</label>
-            <input type="text" name="new-workshop-module-code" autofocus required/>
+            <div class="form-row">
+                <label for="new-workshop-module-code">Module code</label>
+                <input type="text" name="new-workshop-module-code" autofocus required/>
+            </div>
 
-            <label for="new-workshop-module-name">Module name</label>
-            <input type="text" name="new-workshop-module-name" required/>
+            <div class="form-row">
+                <label for="new-workshop-module-name">Module name</label>
+                <input type="text" name="new-workshop-module-name" required/>
+            </div>
 
-            <label for="new-workshop-type">Type</label>
-            <select name="new-workshop-type" required>
-                <option disabled></option>
-                <option value="3d">3D</option>
-                <option value="android">Android</option>
-            </select>
+            <div class="form-row">
+                <label for="new-workshop-type">Type</label>
+                <select name="new-workshop-type" required>
+                    <option disabled></option>
+                    <option value="3d">3D</option>
+                    <option value="android">Android</option>
+                </select>
+            </div>
 
-            <label for="new-workshop-lecturer">Lecturer name</label>
-            <input type="text" name="new-workshop-lecturer" required/>
+            <div class="form-row">
+                <label for="new-workshop-lecturer">Lecturer name</label>
+                <input type="text" name="new-workshop-lecturer" required/>
+            </div>
 
-            <label for="new-workshop-date">Workshop date</label>
-            <input type="date" name="new-workshop-date" required/>
+            <div class="form-row">
+                <label for="new-workshop-date">Workshop date</label>
+                <input type="date" name="new-workshop-date" required/>
+            </div>
 
-            <label for="new-workshop-room">Room</label>
-            <input type="text" name="new-workshop-room" required/>
+            <div class="form-row">
+                <label for="new-workshop-room">Room</label>
+                <input type="text" name="new-workshop-room" required/>
+            </div>
 
-            <label for="new-workshop-time">Approx. wait time per student (mins)</label>
-            <input type="number" name="new-workshop-time" required/>
+            <div class="form-row">
+                <label for="new-workshop-time">Approx. wait time per student (mins)</label>
+                <input type="number" name="new-workshop-time" required/>
+            </div>
 
-            <input type="submit" name="new-workshop-submit" value="Create"/>
+            <div class="form-row">
+                <input type="submit" name="new-workshop-submit" value="Create"/>
+            </div>
         </form>
 
         <?php

@@ -11,8 +11,14 @@
 <div id="main">
     <div class="centre">
         <form action="" method="post">
-            <label for="login-password">Password</label> <input type="password" name="login-password" autofocus required/>
-            <input type="submit" name="login-submit" value="Login"/>
+            <div class="form-row">
+                <label for="login-password">Password</label>
+                <input type="password" name="login-password" autofocus required/>
+            </div>
+
+            <div class="form-row">
+                <input type="submit" name="login-submit" value="Login"/>
+            </div>
         </form>
 
         <?php
