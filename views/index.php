@@ -27,7 +27,7 @@
 
                 <a href="/workshop/<?= $workshop->workshopId; ?>" class="workshop-card">
                     <img src="/img/<?= $workshop->type; ?>.png" alt="<?= $workshop->type; ?>"/>
-                    <span class="workshop-card-title"><?= $workshop->module; ?></span>
+                    <span class="workshop-card-title"><?= $workshop->moduleCode; ?> <?= $workshop->moduleName; ?></span>
                     <span class="workshop-card-lecturer"><?= $workshop->lecturer; ?></span>
                     <span class="workshop-card-date"><?= $workshop->date; ?></span>
                     <span class="workshop-card-room"><?= $workshop->room; ?></span>

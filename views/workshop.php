@@ -2,7 +2,7 @@
     <div class="centre">
         <img src="/img/<?= $workshop->type; ?>.png" alt="<?= $workshop->type; ?>" id="header-img"/>
         <div id="header-info">
-            <h1 id="header-title"><?= $workshop->module; ?></h1>
+            <h1 id="header-title"><?= $workshop->moduleCode; ?> <?= $workshop->moduleName; ?></h1>
             <div class="full-width">
                 <p id="workshop-lecturer"><?= $workshop->lecturer; ?></p>
                 <p id="workshop-date"><?= $workshop->date; ?></p>
