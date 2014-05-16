@@ -1,6 +1,6 @@
 <header>
     <div class="centre">
-        <img src="/img/.png" alt="" id="header-img"/>
+        <img src="/img/new.png" alt="New" id="header-img"/>
         <div id="header-info">
             <h1 id="header-title">Create A New Workshop</h1>
             <p>Lecturers can use this form to create new workshops.</p>
