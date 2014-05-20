@@ -15,6 +15,10 @@
     position: relative;
     padding-top: 25px;
     text-align: center;
+
+    #request-map-wrapper & {
+        height: 50px;
+    }
 }
 
 .cell--pc {
@@ -73,6 +77,10 @@
     .cell {
         width: 60px;
         padding-top: 30px;
+
+        #request-map-wrapper & {
+            height: 60px;
+        }
     }
 
     .cell-label {
