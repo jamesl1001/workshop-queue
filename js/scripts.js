@@ -48,6 +48,12 @@ document.addEventListener('keydown', function(e) {
 
 mapModal.addEventListener('click', hideMap);
 
+document.addEventListener('keydown', function(e) {
+    if(e.which == 27) {
+        hideMap();
+    }
+});
+
 // Events
 function getSlots() {
     var data = 'workshopId=' + workshopId;
