@@ -25,7 +25,7 @@ userSlotsWrapper.addEventListener('click', function(e) {
         showMap(e.target.parentElement.getAttribute('data-seat'));
     }
 
-    if(e.target.className.match('user-name|user-id|user-seat')) {
+    if(e.target.className.match('user-name|user-seat')) {
         showMap(e.target.parentElement.parentElement.getAttribute('data-seat'));
     }
 
@@ -139,7 +139,6 @@ function requestAssistance() {
     requestAssistanceModal.className = 'requesting';
 
     var requestName   = document.getElementById('request-name').value;
-    var requestKentId = document.getElementById('request-id').value;
     var requestSeat;
 
     var requestSeats = document.getElementsByName('seat');
@@ -149,8 +148,8 @@ function requestAssistance() {
         }
     }
 
-    if(requestName && requestKentId && requestSeat) {
-        var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestKentId=' + requestKentId + '&requestSeat=' + requestSeat;
+    if(requestName && requestSeat) {
+        var data = 'workshopId=' + workshopId + '&requestName=' + requestName + '&requestSeat=' + requestSeat;
         var request = new XMLHttpRequest();
         request.open('POST', '/php/requestAssistance.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');

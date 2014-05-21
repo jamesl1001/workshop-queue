@@ -14,7 +14,7 @@ class Workshop {
     static function getSlots($id) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT slotId, name, kentId, seat FROM slots WHERE workshopId='$id'");
+        $sth = $dbh->query("SELECT slotId, name, seat FROM slots WHERE workshopId='$id'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetchAll();
 
@@ -53,7 +53,7 @@ class Workshop {
                         $html .= '<div class="cell cell--empty"></div>';
                         break;
                     case is_numeric($cell):
-                        $html .= "<div class=\"cell cell--pc\"><input type=\"radio\" name=\"seat\" id=\"$room-$cell\" class=\"cell-radio\" value=\"$room-$cell\" tabindex=\"3\"/><label for=\"$room-$cell\" class=\"cell-label\">$cell</label></div>";
+                        $html .= "<div class=\"cell cell--pc\"><input type=\"radio\" name=\"seat\" id=\"$room-$cell\" class=\"cell-radio\" value=\"$room-$cell\" tabindex=\"2\"/><label for=\"$room-$cell\" class=\"cell-label\">$cell</label></div>";
                         break;
                     case 'D':
                         $html .= '<div class="cell cell--door" title="Door"><i class="icon-exit"></i></div>';
