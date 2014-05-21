@@ -5,7 +5,6 @@
 
 .workshop-card {
     width: 100%;
-    min-height: 190px;
     background: #FFF;
     border-radius: 5px;
     float: left;
@@ -49,12 +48,12 @@
 .workshop-card--add {
     font-size: 40px;
     text-align: center;
-    line-height: 150px;
 }
 
 @media (min-width: 800px) {
     .workshop-card {
         width: 49%;
+        min-height: 190px;
         margin-left: 1%;
         margin-right: 1%;
     }
@@ -66,11 +65,16 @@
     .workshop-card:nth-child(odd) {
         margin-left: 0;
     }
+
+    .workshop-card--add {
+        line-height: 150px;
+    }
 }
 
 @media (min-width: 1200px) {
     .workshop-card {
         width: 23.5%;
+        min-height: 220px;
     }
 
     .workshop-card:nth-child(even) {
@@ -87,5 +91,9 @@
 
     .workshop-card:nth-child(4n+4) {
         margin-right: 0;
+    }
+
+    .workshop-card--add {
+        line-height: 180px;
     }
 }
