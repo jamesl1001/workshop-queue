@@ -12,6 +12,13 @@ body {
     font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+h2 {
+    margin: 0 0 20px;
+    color: $dgrey;
+    font-size: 18px;
+    font-weight: normal;
+}
+
 .centre {
     width: 100%;
     max-width: 1200px;
@@ -29,7 +36,18 @@ body {
     overflow: hidden;
 }
 
+@media (min-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+}
+
 @media (min-width: 800px) {
+    h2 {
+        margin-bottom: 40px;
+        font-size: 24px;
+    }
+
     .centre {
         padding: 40px;
     }
