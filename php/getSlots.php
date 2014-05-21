@@ -11,7 +11,10 @@ foreach($slots as $slot) {
     echo $slot->seat . ',';
 }
 
-echo '~';
+if($slots) {
+    echo '~';
+    echo '<h2>This is the queue. ' . $slots[0]->name . ' is up next.</h2>';
+}
 
 $i = 1;
 
