@@ -19,30 +19,34 @@
 
 <div id="main">
     <div class="centre">
-        <div id="user-slots">
-            <i class="icon-spinner"></i>
+        <div class="col-l">
+            <div id="user-slots">
+                <i class="icon-spinner"></i>
+            </div>
         </div>
 
-        <label id="request-assistance-btn" for="request-assistance-toggle"><i class="icon-add"></i><span>Request assistance</span></label>
-        <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack"/>
+        <div class="col-r">
+            <label id="request-assistance-btn" for="request-assistance-toggle"><i class="icon-add"></i><span>Request assistance</span></label>
+            <input type="checkbox" id="request-assistance-toggle" class="checkbox-hack"/>
 
-        <div id="request-assistance-modal">
-            <div class="request-assistance-form-row">
-                <label for="request-name">Name</label> <input type="text" id="request-name" tabindex="1" required/>
-            </div>
-
-            <div class="request-assistance-form-row">
-                <label for="request-seat">Seat</label>
-                <div id="request-map-wrapper">
-                    <?= $map; ?>
+            <div id="request-assistance-modal">
+                <div class="request-assistance-form-row">
+                    <label for="request-name">Name</label> <input type="text" id="request-name" tabindex="1" required/>
                 </div>
-            </div>
 
-            <div class="request-assistance-form-row">
-                <div id="request-submit" tabindex="3"><i class="icon-add"></i>Request</div>
-            </div>
+                <div class="request-assistance-form-row">
+                    <label for="request-seat">Seat</label>
+                    <div id="request-map-wrapper">
+                        <?= $map; ?>
+                    </div>
+                </div>
 
-            <i id="request-assistance-spinner" class="icon-spinner"></i>
+                <div class="request-assistance-form-row">
+                    <div id="request-submit" tabindex="3"><i class="icon-add"></i>Request</div>
+                </div>
+
+                <i id="request-assistance-spinner" class="icon-spinner"></i>
+            </div>
         </div>
 
         <div id="map-modal">

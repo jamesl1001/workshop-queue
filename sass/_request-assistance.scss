@@ -186,3 +186,24 @@
         }
     }
 }
+
+@media (min-width: 1200px) {
+    #request-assistance-btn {
+        height: 33px;
+        margin-bottom: 40px;
+        cursor: default;
+        line-height: 33px;
+
+        i,
+        span {
+            height: auto;
+            color: $dgrey;
+            font-size: 24px;
+            line-height: 33px;
+        }
+    }
+
+    #request-assistance-modal {
+        display: block;
+    }
+}

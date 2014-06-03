@@ -25,6 +25,7 @@ h2 {
     position: relative;
     margin: 0 auto;
     padding: 20px;
+    overflow: hidden;
 }
 
 .checkbox-hack {
@@ -50,5 +51,19 @@ h2 {
 
     .centre {
         padding: 40px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-l {
+        width: 49%;
+        float: left;
+        margin-right: 1%;
+    }
+
+    .col-r {
+        width: 49%;
+        float: right;
+        margin-left: 1%;
     }
 }
