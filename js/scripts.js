@@ -163,6 +163,7 @@ function requestAssistance() {
                     getSlots();
                     requestAssistanceToggle.checked = false;
                     window.scrollTo(0,0);
+                    alert('Assistance has been requested. You have been added to the end of the queue.');
                 }
                 stopRequesting();
             }
