@@ -1,4 +1,5 @@
 // Init
+var data                    = 'workshopId=' + workshopId;
 var main                    = document.getElementById('main');
 var workshopSlotCount       = document.getElementById('workshop-slot-count');
 var userSlotsWrapper        = document.getElementById('user-slots');
@@ -7,6 +8,7 @@ var requestAssistanceSubmit = document.getElementById('request-submit');
 var requestAssistanceToggle = document.getElementById('request-assistance-toggle');
 var mapModal                = document.getElementById('map-modal');
 var mapModalWrapper         = document.getElementById('map-modal-wrapper');
+var radios                  = document.getElementsByClassName('cell-radio');
 
 getSlots();
 
@@ -56,7 +58,6 @@ document.addEventListener('keydown', function(e) {
 
 // Events
 function getSlots() {
-    var data = 'workshopId=' + workshopId;
     var request = new XMLHttpRequest();
     request.open('POST', '/php/getSlots.php', true);
     request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
@@ -68,8 +69,6 @@ function getSlots() {
             if(response) {
                 var responseSplit = response.split('~');
                 var seats = responseSplit[0].split(',');
-
-                var radios = document.getElementsByClassName('cell-radio');
 
                 for(var i = 0, l = radios.length; i < l; i++) {
                     var radio = document.getElementById(radios[i].id);
