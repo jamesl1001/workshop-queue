@@ -1,5 +1,5 @@
 <meta charset="utf-8">
-<meta name="description" content=""/>
+<meta name="description" content="A tool to help students request assistance from the lecturer and assistants during workshops."/>
 <meta name="author" content="JaL Productions"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 <title>Workshop Queue</title>
