@@ -27,15 +27,15 @@ foreach($array as $row) {
             case '':
                 $html .= '<div class="cell cell--empty"></div>';
                 break;
-            case is_numeric($cell):
+            case 'D':
+                $html .= '<div class="cell cell--door" title="Door"><i class="icon-exit"></i></div>';
+                break;
+            default:
                 if($cell == $seat) {
                     $html .= "<div class=\"cell cell--pc cell--active\"><div class=\"cell-label\">$cell</div></div>";
                 } else {
                     $html .= "<div class=\"cell cell--pc\"><div class=\"cell-label\">$cell</div></div>";
                 }
-                break;
-            case 'D':
-                $html .= '<div class="cell cell--door" title="Door"><i class="icon-exit"></i></div>';
                 break;
         }
     }
