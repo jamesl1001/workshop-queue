@@ -3,8 +3,8 @@
         <img src="/img/logo.png" alt="Workshop Queue logo" id="header-img"/>
         <div id="header-info">
             <h1 id="header-title">Workshop Queue <sup>beta</sup></h1>
-            <p>Workshop Queue is a tool to help students request assistance from the lecturer and assistants during workshops.</p>
-            <p>Rather than waiting with your hand up trying to get their attention, simply type in your name and select where you are sitting, and Workshop Queue will add your name to a first-come first-serve queue.</p>
+            <p>Workshop Queue is a tool to help students request assistance from the lecturer, assistants and demonstrators during workshops.</p>
+            <p>Rather than waiting with your hand up trying to gain their attention, simply type in your name and select where you are sitting and Workshop Queue will add your name to a first-come first-serve queue.</p>
             <p>The queue will update automatically every 5 seconds so you can see when your turn is up next.</p>
         </div>
     </div>
