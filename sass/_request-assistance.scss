@@ -93,6 +93,7 @@
     #request-submit {
         width: 115px;
         float: right;
+        margin: 1px;
         padding: 5px;
         cursor: pointer;
         color: $mgrey;
@@ -106,6 +107,10 @@
 
         &:hover i {
             color: $dgrey;
+        }
+
+        &:focus {
+            outline: 1px solid $blue;
         }
 
         i {
