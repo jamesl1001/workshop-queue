@@ -37,6 +37,10 @@ h2 {
     overflow: hidden;
 }
 
+a img {
+    border: 0;
+}
+
 @media (min-width: 480px) {
     h2 {
         font-size: 20px;
