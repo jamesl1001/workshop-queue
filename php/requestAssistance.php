@@ -7,7 +7,7 @@ $workshopId    = $_POST['workshopId'];
 $requestName   = $_POST['requestName'];
 $requestSeat   = $_POST['requestSeat'];
 
-$sth = $dbh->query("SELECT name, seat FROM slots WHERE workshopId='$workshopId' AND name='$requestName' OR seat='$requestSeat'");
+$sth = $dbh->query("SELECT name, seat FROM slots WHERE workshopId='$workshopId' AND active=1 AND name='$requestName' OR seat='$requestSeat'");
 $sth->setFetchMode(PDO::FETCH_OBJ);
 $result = $sth->fetch();
 
