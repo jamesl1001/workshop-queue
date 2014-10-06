@@ -8,6 +8,7 @@
     background: #FFF;
     border-radius: 5px;
     float: left;
+    position: relative;
     margin-bottom: 20px;
     padding: 20px;
     overflow: hidden;
@@ -45,6 +46,27 @@
     font-weight: bold;
 }
 
+.workshop-card-end {
+    width: 80px;
+    height: 55px;
+    border-top: 1px solid transparent;
+    border-left: 1px solid transparent;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 28px;
+    text-align: center;
+    line-height: 55px;
+
+    &:hover {
+        border-color: $mgrey;
+
+        i {
+            color: $dgrey;
+        }
+    }
+}
+
 .workshop-card--add {
     font-size: 40px;
     text-align: center;
@@ -53,7 +75,7 @@
 @media (min-width: 800px) {
     .workshop-card {
         width: 49%;
-        min-height: 190px;
+        min-height: 200px;
         margin-left: 1%;
         margin-right: 1%;
     }
@@ -74,7 +96,7 @@
 @media (min-width: 1200px) {
     .workshop-card {
         width: 23.5%;
-        min-height: 220px;
+        min-height: 230px;
     }
 
     .workshop-card:nth-child(even) {

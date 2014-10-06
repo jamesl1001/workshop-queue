@@ -25,12 +25,18 @@
 
             <?php foreach($workshops as $workshop): ?>
 
-                <a href="/workshop/<?= $workshop->workshopId; ?>" class="workshop-card">
+                <a href="/workshop/<?= $workshop->workshopId; ?>" class="workshop-card" data-workshopid="<?= $workshop->workshopId; ?>">
                     <img src="/img/<?= $workshop->type; ?>.png" alt="<?= $workshop->type; ?>"/>
                     <span class="workshop-card-title"><?= $workshop->moduleCode; ?> <?= $workshop->moduleName; ?></span>
                     <span class="workshop-card-lecturer"><?= $workshop->lecturer; ?></span>
                     <span class="workshop-card-date"><?= $workshop->date; ?></span>
                     <span class="workshop-card-room"><?= $workshop->room; ?></span>
+
+                    <?php if(isset($_SESSION['admin']) && $_SESSION['admin']): ?>
+
+                        <span class="workshop-card-end"><i class="icon-cancel"></i></span>
+
+                    <?php endif; ?>
                 </a>
 
             <?php endforeach; ?>

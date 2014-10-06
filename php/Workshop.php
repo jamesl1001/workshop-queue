@@ -4,7 +4,7 @@ class Workshop {
     static function getData($id) {
         require('db.php');
 
-        $sth = $dbh->query("SELECT workshopId, timestamp, moduleCode, moduleName, type, lecturer, date, room, time FROM workshops WHERE workshopId='$id'");
+        $sth = $dbh->query("SELECT workshopId, moduleCode, moduleName, type, lecturer, date, room, time FROM workshops WHERE workshopId='$id'");
         $sth->setFetchMode(PDO::FETCH_OBJ);
         $result = $sth->fetch();
 
