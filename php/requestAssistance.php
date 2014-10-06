@@ -11,11 +11,16 @@ $sth = $dbh->query("SELECT name, seat FROM slots WHERE workshopId='$workshopId' 
 $sth->setFetchMode(PDO::FETCH_OBJ);
 $result = $sth->fetch();
 
+$created   = date("Y-m-d H:i:s");
+$cancelled = '0000-00-00 00:00:00';
+
 if(!$result) {
-    $sth = $dbh->prepare("INSERT INTO slots (workshopId, name, seat) VALUE (:workshopId, :requestName, :requestSeat)");
+    $sth = $dbh->prepare("INSERT INTO slots (workshopId, name, seat, active, created, cancelled) VALUE (:workshopId, :requestName, :requestSeat, 1, :created, :cancelled)");
     $sth->bindParam(':workshopId', $workshopId);
     $sth->bindParam(':requestName', $requestName);
     $sth->bindParam(':requestSeat', $requestSeat);
+    $sth->bindParam(':created', $created);
+    $sth->bindParam(':cancelled', $cancelled);
     $sth->execute();
 
     $_SESSION['mySlotId'] = $dbh->lastInsertId();
