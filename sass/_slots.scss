@@ -62,16 +62,16 @@
 }
 
 .user-name {
-    width: 72%;
+    width: 66%;
     color: $blue;
     font-size: 16px;
 }
 
 .user-seat {
-    width: 28%;
+    width: 34%;
     padding-right: 10px;
     color: $mgrey;
-    font-size: 14px;
+    font-size: 12px;
     text-align: right;
 }
 
@@ -100,12 +100,13 @@
     }
 
     .user-name {
-        width: 80%;
+        width: 78%;
         font-size: 20px;
     }
 
     .user-seat {
-        width: 20%;
+        width: 22%;
+        font-size: 14px;
     }
 }
 
@@ -137,5 +138,16 @@
     .user-seat {
         padding-right: 20px;
         font-size: 20px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .user-name {
+        width: 74%;
+    }
+
+    .user-seat {
+        width: 26%;
     }
 }
