@@ -59,6 +59,7 @@
 .request-assistance-form-row {
     min-height: 40px;
     margin-bottom: 20px;
+    padding: 1px;
     overflow: hidden;
 
     > label,
@@ -93,7 +94,6 @@
     #request-submit {
         width: 115px;
         float: right;
-        margin: 1px;
         padding: 5px;
         cursor: pointer;
         color: $mgrey;
