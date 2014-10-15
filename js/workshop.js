@@ -158,6 +158,8 @@ function requestAssistance() {
             if(request.readyState == 4 && request.status == 200) {
                 if(request.responseText == 'duplicate') {
                     alert('You have already requested assistance!');
+                } else if(request.responseText == 'profanity') {
+                    alert('No profanity please!');
                 } else {
                     getSlots();
                     requestAssistanceToggle.checked = false;
