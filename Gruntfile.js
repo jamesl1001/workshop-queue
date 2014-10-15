@@ -40,9 +40,9 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     expand: true,
-                    cwd: '.',
-                    src: 'scripts.js',
-                    dest: '.',
+                    cwd: 'js',
+                    src: '*.js',
+                    dest: 'build',
                     ext: '.min.js'
                 }]
             }

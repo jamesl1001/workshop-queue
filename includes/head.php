@@ -3,7 +3,11 @@
 <meta name="author" content="JaL Productions"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 <title>Workshop Queue</title>
-<link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+<?php if($_SERVER['SERVER_NAME'] == 'wq.dev'): ?>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+<?php else: ?>
+    <link rel="stylesheet" type="text/css" href="/build/styles.min.css"/>
+<?php endif; ?>
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,600">
 <link rel="shortcut icon" href="/img/favicon.ico"/>
 <link rel="apple-touch-icon-precomposed" href="/img/touchicon-57.png">
