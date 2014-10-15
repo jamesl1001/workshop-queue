@@ -31,7 +31,7 @@
 
             <div id="request-assistance-modal">
                 <div class="request-assistance-form-row">
-                    <label for="request-name">Name</label> <input type="text" id="request-name" tabindex="1" required/>
+                    <label for="request-name">Name</label> <input type="text" id="request-name" placeholder="Must be unique (try adding your surname)" tabindex="1" required/>
                 </div>
 
                 <div class="request-assistance-form-row">
