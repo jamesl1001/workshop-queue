@@ -56,6 +56,8 @@ document.addEventListener('keydown', function(e) {
     }
 });
 
+window.addEventListener('hashchange', hashChange);
+
 // Events
 function getSlots() {
     var request = new XMLHttpRequest();
@@ -92,7 +94,8 @@ function getSlots() {
 
 function showMap(seat) {
     mapModal.className = 'map-modal--show';
-    var seatSplit = seat.split('-');
+    location.hash      = 'map';
+    var seatSplit      = seat.split('-');
 
     var data = 'room=' + seatSplit[0] + '&seat=' + seatSplit[1];
     var x = new XMLHttpRequest();
@@ -110,6 +113,13 @@ function showMap(seat) {
 
 function hideMap() {
     mapModal.className = mapModal.className.replace('map-modal--show', '');
+    location.hash      = '';
+}
+
+function hashChange() {
+    if(location.hash == '') {
+        hideMap();
+    }
 }
 
 function cancelSlot(slotId) {
