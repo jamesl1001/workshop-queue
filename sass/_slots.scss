@@ -17,6 +17,7 @@
 }
 
 .user-order,
+.user-assisting,
 .user-cancel {
     width: 50px;
     position: absolute;
@@ -29,6 +30,7 @@
     font-size: 30px;
 }
 
+.user-assisting,
 .user-cancel {
     border-left: 1px solid $lgrey;
     display: block;
@@ -81,6 +83,7 @@
     }
 
     .user-order,
+    .user-assisting,
     .user-cancel {
         width: 60px;
         line-height: 80px;
@@ -90,6 +93,7 @@
         font-size: 40px;
     }
 
+    .user-assisting,
     .user-cancel {
         font-size: 25px;
     }
@@ -116,6 +120,7 @@
     }
 
     .user-order,
+    .user-assisting,
     .user-cancel {
         width: 80px;
         line-height: 100px;
@@ -125,6 +130,7 @@
         font-size: 60px;
     }
 
+    .user-assisting,
     .user-cancel {
         font-size: 30px;
     }

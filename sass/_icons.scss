@@ -22,6 +22,9 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-assisting:before {
+    content: "\61";
+}
 .icon-map:before {
     content: "\6d";
 }

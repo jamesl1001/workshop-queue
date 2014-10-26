@@ -21,7 +21,11 @@ foreach($slots as $key => $slot) {
               <span class="user-order">' . ($key + 1) . '</span>
               <span class="user-info"><span class="user-name">' . $slot->name . '</span> <span class="user-seat">' . $slot->seat . '</span></span>';
     if((isset($_SESSION['mySlotId']) && $slot->slotId == $_SESSION['mySlotId']) || (isset($_SESSION['admin']) && $_SESSION['admin'])) {
-        echo '<span class="user-cancel"><i class="icon-cancel"></i></span>';
+        if(isset($_SESSION['admin']) && $_SESSION['admin'] && $slot->status == 0) {
+            echo '<span class="user-assisting"><i class="icon-assisting"></i></span>';
+        } else {
+            echo '<span class="user-cancel"><i class="icon-cancel"></i></span>';
+        }
     }
     echo '</div>';
 }

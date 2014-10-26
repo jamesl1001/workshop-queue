@@ -31,6 +31,14 @@ userSlotsWrapper.addEventListener('click', function(e) {
         showMap(e.target.parentElement.parentElement.getAttribute('data-seat'));
     }
 
+    if(e.target.className == 'user-assisting') {
+        assistSlot(e.target.parentElement.getAttribute('data-slotid'));
+    }
+
+    if(e.target.className == 'icon-assisting') {
+        assistSlot(e.target.parentElement.parentElement.getAttribute('data-slotid'));
+    }
+
     if(e.target.className == 'user-cancel') {
         cancelSlot(e.target.parentElement.getAttribute('data-slotid'));
     }
@@ -119,6 +127,24 @@ function hideMap() {
 function hashChange() {
     if(location.hash == '') {
         hideMap();
+    }
+}
+
+function assistSlot(slotId) {
+    var data = 'slotId=' + slotId;
+    var request = new XMLHttpRequest();
+    request.open('POST', '/php/assistSlot.php', true);
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+    request.send(data);
+
+    request.onreadystatechange = function() {
+        if(request.readyState == 4 && request.status == 200) {
+            getSlots();
+        }
+    }
+
+    request.onerror = function() {
+        alert('Something went wrong. Please try again.');
     }
 }
 
