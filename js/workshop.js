@@ -156,6 +156,7 @@ function cancelSlot(slotId) {
         var request = new XMLHttpRequest();
         request.open('POST', '/php/cancelSlot.php', true);
         request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        request.setRequestHeader('X-Csrf-workshop', getCookie('csrf-workshop'));
         request.send(data);
 
         request.onreadystatechange = function() {
@@ -218,4 +219,10 @@ function requestAssistance() {
     function stopRequesting() {
         requestAssistanceModal.className = '';
     }
+}
+
+function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length == 2) return parts.pop().split(";").shift();
 }

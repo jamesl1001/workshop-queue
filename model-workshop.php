@@ -1,5 +1,7 @@
 <?php
 
+setcookie('csrf-workshop', md5(uniqid()), 0, '/');
+
 $url       = explode('/', $q);
 $workshopId = $url[1];
 
